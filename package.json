@@ -1,15 +1,14 @@
 {
   "name": "gulp-mad",
-  "version": "0.0.1",
-  "description": "",
+  "version": "0.0.2",
+  "description": "gulp-mad",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": {
     "name": "zixiao",
     "email": "545570335@qq.com",
-    "url": ""
+    "url": "https://github.com/cuo9958/gulp-mad"
   },
   "engines": {
     "node": ">=0.10"
