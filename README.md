@@ -18,12 +18,12 @@ npm install --save-dev gulp-mad
 
 ``` JavaScript
 const gulp = require('gulp');
-const madx = require('./index');
+const mad = require('gulp-mad');
 const ts = require('gulp-typescript');
 
 gulp.task("default", function () {
     gulp.src("expmlate/a.mad")
-        .pipe(madx(".ts"))
+        .pipe(mad(".ts"))
         .pipe(ts({ module: "amd" }))
         .pipe(gulp.dest('dist'));
 });
