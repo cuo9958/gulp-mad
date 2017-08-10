@@ -1,0 +1,19 @@
+{
+  "name": "gulp-mad",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "zixiao",
+    "email": "545570335@qq.com",
+    "url": ""
+  },
+  "engines": {
+    "node": ">=0.10"
+  },
+  "gulpplugin": "gulp-mad",
+  "license": "MIT"
+}

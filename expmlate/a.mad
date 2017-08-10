@@ -1,0 +1,22 @@
+<template id="aa-bb">
+    <div class="main">asadwa</div>
+</template>
+
+<template>
+    <div class="main">asadwa</div>
+</template>
+<script>
+import api=require('api');
+console.log(api)
+var a = 1;
+return a;
+export { a }
+</script>
+
+<style>
+    body{
+        background: #fff;
+    }
+</style>
+
+
