@@ -33,7 +33,7 @@ function setContent(content) {
 function madLoader(extension) {
 
     var stream = through.obj(function (file, enc, cb) {
-        //throw new PluginError(PLUGIN_NAME, 'Missing prefix text!');
+        //如果文件内容为空，则返回继续处理
         if (file.isNull()) return cb(null, file);
         var dest = replaceExtension(file.path, extension);
         if (file.isBuffer()) {
