@@ -1,6 +1,7 @@
 {
   "name": "gulp-mad",
-  "version": "0.0.4",
+  "version": "0.0.5",
+  "keywords":"gulp-mad",
   "description": "gulp-mad",
   "main": "index.js",
   "scripts": {

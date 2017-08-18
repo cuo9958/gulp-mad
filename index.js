@@ -18,7 +18,7 @@ function setContent(content) {
     html_list.map(template => {
         var arr = template.match(/id=\"([a-zA-Z\-_0-9]*)\"/);
         var id = arr && arr.length > 1 ? arr[1] : "template";
-        id=id.replace("-","_");
+        id = id.replace("-", "_");
         var arr = template.match(/<template\s*[a-zA-Z0-9\-=\"_]*\s*>\s*(((?!<\/template>).)*)\s*<\/template>/);
         var tt = arr && arr.length > 1 ? arr[1] : "";
         html += `var ${id}=\`${tt}\`;\n`;
@@ -31,7 +31,7 @@ function setContent(content) {
 
 //处理文件
 function madLoader(extension) {
-
+    extension = extension ? extension : ".js";
     var stream = through.obj(function (file, enc, cb) {
         //如果文件内容为空，则返回继续处理
         if (file.isNull()) return cb(null, file);
@@ -41,7 +41,6 @@ function madLoader(extension) {
             file.path = dest;
             return cb(null, file);
         }
-
         if (file.isStream()) {
             streamer.on('error', this.emit.bind(this, 'error'));
             // 开始转换
@@ -52,8 +51,6 @@ function madLoader(extension) {
         this.push(file);
         cb(null, file);
     });
-
-    // 返回文件 stream
     return stream;
 }
 
