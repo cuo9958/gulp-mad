@@ -21,11 +21,11 @@ function setContent(content) {
         id = id.replace("-", "_");
         var arr = template.match(/<template\s*[a-zA-Z0-9\-=\"_]*\s*>\s*(((?!<\/template>).)*)\s*<\/template>/);
         var tt = arr && arr.length > 1 ? arr[1] : "";
-        html += `var ${id}=\`${tt}\`;\n`;
+        html += `let ${id}=\`${tt}\`;\n`;
     });
     style = style[1] || "";
     js = js[1] || "";
-    var result = `${html} var style=\`${style}\`\n` + js;
+    var result = `${html} let style=\`${style}\`\n` + js;
     return result;
 }
 
